@@ -2,11 +2,6 @@ from turtle import *
 
 t = Turtle()
 
-def square(side):
-    for i in range(4):
-        t.forward(side)
-        t.left(90)
-
 def romb(side, angle):
     """Функция реализует ромб с одним заданным углом и стороной"""
     for i in range(2):
@@ -15,5 +10,17 @@ def romb(side, angle):
         t.forward(side)
         t.left(180 - angle)
 
-romb(50, 60)
+def regular_polygon(n, side):
+    """Функция реализует правильный многогранник с заданным числом сторон и длиной стороны"""
+    angle = (n-2)*180/n
+    for i in range(n):
+        t.forward(side)
+        t.left(180 - angle)
+
+def square(side):
+    """Функция реализует квадрат с заданной стороной"""
+    regular_polygon(4, side)
+
+
+print(square(100))
 t.screen.mainloop()

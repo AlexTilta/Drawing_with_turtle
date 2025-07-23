@@ -21,6 +21,3 @@ def square(side):
     """Функция реализует квадрат с заданной стороной"""
     regular_polygon(4, side)
 
-
-print(square(100))
-t.screen.mainloop()
